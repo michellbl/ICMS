@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculo ICMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+    
+    mercadoria = prompt('Digite o valor da mercadoria: ')
+    frete = prompt('Digite o valor do frete: ')
+    origem = prompt('Qual a origem da mercadoria: ')
+    mercadoria = parseFloat(mercadoria)
+    frete = parseFloat(frete)
+
+    if((origem = 'ac') || (origem = 'es') || (origem = 'go') || (origem = 'mt') || (origem = 'ms') || (origem = 'pa')){
+        soma = mercadoria + frete
+        base = soma * (17/100)
+        ValTotal = soma + base
+    }else((origem = 'al') || (origem = 'am') || (origem = 'ap') || (origem = 'ba') || (origem = 'ce') || (origem = 'df') || (origem = 'ma') || (origem = 'pa') || (origem = 'pr') || (origem = 'pe') || (origem = 'pi') || (origem = 'rn') || (origem = 'rs'));{
+        soma = mercadoria + frete
+        base = soma * (18/100)
+        ValTotal = soma + base
+    }
+
+    document.write('Base de calculo: '+soma +'<br/>')
+    document.write('Valor de ICMS a ser pago: '+base +'<br/>')
+    document.write('Pague pro governo: '+ValTotal +'<br/>')
+    </script>
+</body>
+</html>
